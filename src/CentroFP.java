@@ -47,6 +47,44 @@ public class CentroFP {
         return primerHuecoLibre;
     }
 
+    /**
+     * Se revisa si primero hay hueco libre para poder registrar al alumno
+     * @param alumno busca si existe ya ese alumno
+     * @return true si se asigna y false si no se asigna
+     */
+    public boolean registrarAlumno(Alumno alumno){
+        boolean alumnoRegistado = false;
+        int posicion;
+        if (buscarAlumno(alumno.getId()) == null){
+            posicion = buscarPrimerHuecoLibre();
+            if (posicion >= 0){
+                alumnos[posicion] = alumno;
+                alumnoRegistado = true;
+            }
+        }
+        return alumnoRegistado;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
