@@ -14,6 +14,9 @@ public class Main {
         System.out.println(centroFP.registrarAlumno(alumno2));
         System.out.println(centroFP.registrarAlumno(alumno3));
 
+        //Mostrar alumnos
+        System.out.println(centroFP.mostrarAlumnos());
+
 
     }
 }
