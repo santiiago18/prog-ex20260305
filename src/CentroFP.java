@@ -31,6 +31,22 @@ public class CentroFP {
     }
 
 
+    /**
+     * Busca el primer hueco libre
+     * @return Devuelve el primer hueco libre
+     */
+    private int buscarPrimerHuecoLibre(){
+        int primerHuecoLibre = -1;
+        boolean seguirBuscando = true;
+        for(int i = 0; i < MAX_ALUMNOS && seguirBuscando; i++){
+            if(alumnos[i] == null){
+                primerHuecoLibre = i;
+                seguirBuscando = false;
+            }
+        }
+        return primerHuecoLibre;
+    }
+
 
 
 }
