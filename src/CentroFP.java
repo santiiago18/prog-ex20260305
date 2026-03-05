@@ -12,6 +12,24 @@ public class CentroFP {
         alumnos = new Alumno[MAX_ALUMNOS];
     }
 
+    /**
+     * Busca el alumno por el id asignado a cada estudiante
+     * @param id del estudiante
+     * @return devuelve el alumno con el id solicitado
+     */
+    public Alumno buscarAlumno (int id){
+        Alumno alumnoEncontrado = null;
+        boolean seguirBuscando = true;
+
+        for(int i = 0; i < MAX_ALUMNOS && seguirBuscando; i++){
+            if(alumnos[i] != null && alumnos[i].getId() == id){
+                alumnoEncontrado = alumnos[i];
+                seguirBuscando = false;
+            }
+        }
+        return alumnoEncontrado;
+    }
+
 
 
 
